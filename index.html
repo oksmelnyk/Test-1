@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="result">
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="edit" class="btn btn-warning">Edit</button>
+        <button type="button" id="style" class="btn btn-info">Style</button>
+      </div>
+
+      <div class="constructor">
+        <div class="editText d-none">
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="floatingTextarea2"
+              style="height: 170px"
+            ></textarea>
+            <label for="floatingTextarea2"></label>
+          </div>
+          <div class="buttons"></div>
+          <button type="button" id="btnADD" class="btn btn-danger mt-3">
+            Add
+          </button>
+          <button type="button" id="save" class="btn btn-success mt-3">
+            Save
+          </button>
+        </div>
+
+        <div class="style d-none">
+          <div class="col-6">
+            <div class="fontSize">
+              <label class="form-label col-12 mt-3" for="position"
+                >Font Family:</label
+              >
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input radioBTN"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio1"
+                  value="12px"
+                />
+                <label class="form-check-label" for="inlineRadio1">12px</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input radioBTN"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio2"
+                  value="14px"
+                />
+                <label class="form-check-label" for="inlineRadio2">14px</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input radioBTN"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio3"
+                  value="16px"
+                />
+                <label class="form-check-label" for="inlineRadio3">16px</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input radioBTN"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio4"
+                  value="18px"
+                />
+                <label class="form-check-label" for="inlineRadio4">18px</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input radioBTN"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inlineRadio5"
+                  value="20px"
+                />
+                <label class="form-check-label" for="inlineRadio5">20px</label>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label mt-3" for="position"
+                  >Font Family:</label
+                >
+
+                <select class="form-select" id="position" name="position">
+                  <option selected>Choose option</option>
+                  <option style="font-family: cursive">Cursive</option>
+                  <option style="font-family: fantasy">Fantasy</option>
+                  <option style="font-family: monospace">Monospace</option>
+                  <option style="font-family: sans-serif">Sens-serif</option>
+                </select>
+              </div>
+            </div>
+
+            <label class="form-label col-12 mt-3" for="position">Colors:</label>
+            <button type="button" id="textColor" class="btn btn-secondary">
+              Text Color
+            </button>
+            <button
+              type="button"
+              id="backgroundColor"
+              class="btn btn-secondary"
+            >
+              Background Color
+            </button>
+
+            <label class="form-label col-12 mt-3" for="position">Style:</label>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="bold"
+                value="bold"
+              />
+              <label class="form-check-label" for="bold">Bold Text</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="cursive"
+                value="cursive"
+              />
+              <label class="form-check-label" for="cursive">Cursive Text</label>
+            </div>
+          </div>
+
+          <div class="col-6 blockColors d-none">
+            <div class="block" id="colors">
+              <div class="blockItem darkgreen"></div>
+              <div class="blockItem brown"></div>
+              <div class="blockItem green"></div>
+              <div class="blockItem lightgreen"></div>
+              <div class="blockItem grey"></div>
+              <div class="blockItem orangered"></div>
+              <div class="blockItem blue"></div>
+              <div class="blockItem purple"></div>
+              <div class="blockItem olive"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="choose d-none">
+        <label class="form-label col-12" for="position"
+          >Choose what you want :</label
+        >
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input radioBTN"
+            type="radio"
+            name="inlineRadioOptions"
+            id="chooseTable"
+            value="table"
+          />
+          <label class="form-check-label" for="chooseTable">Table</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input radioBTN"
+            type="radio"
+            name="inlineRadioOptions"
+            id="chooseList"
+            value="list"
+          />
+          <label class="form-check-label" for="chooseList">List</label>
+        </div>
+
+        <form id="listForm" class="d-none">
+          <div class="mb-3">
+            <label class="form-label col-12 mt-1" for="listCount"
+              >Count Li :</label
+            >
+            <input
+              type="number"
+              min="1"
+              required
+              class="form-control"
+              id="listCount"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label mt-3" for="listType">Type of marks:</label>
+
+            <select class="form-select" id="listType" name="listType">
+              <option style="">circle</option>
+              <option style="">disc</option>
+              <option style="">square</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-success">Create List</button>
+        </form>
+
+        <form id="tableForm" class="d-none">
+          <div class="mb-3 form-group row mt-2">
+            <label class="form-label col-sm-2" for="tableCountTR"
+              >Count TR:</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="number"
+                min="1"
+                required
+                class="form-control"
+                id="tableCountTR"
+                aria-describedby="emailHelp"
+                placeholder="Count TR"
+              />
+            </div>
+          </div>
+          <div class="mb-3 form-group row">
+            <label class="form-label col-sm-2" for="tableCountTD"
+              >Count TD:</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="number"
+                min="1"
+                required
+                class="form-control"
+                id="tableCountTD"
+                aria-describedby="emailHelp"
+                placeholder="Count TD"
+              />
+            </div>
+          </div>
+          <label class="form-label col-12 mt-1" for="position"
+            >Add style to your table:</label
+          >
+          <div class="mb-3 form-group row">
+            <label class="form-label col-sm-3" for="widthTD"
+              >Width of TD:</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="number"
+                min="1"
+                required
+                class="form-control"
+                id="widthTD"
+                aria-describedby="emailHelp"
+                placeholder="Width of TD:"
+              />
+            </div>
+          </div>
+          <div class="mb-3 form-group row">
+            <label class="form-label col-sm-3" for="heightTD"
+              >Height of TD:</label
+            >
+            <div class="col-sm-9">
+              <input
+                type="number"
+                min="1"
+                required
+                class="form-control"
+                id="heightTD"
+                aria-describedby="emailHelp"
+                placeholder="Height of TD:"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label class="form-label" for="tableBorder"
+                >Width of border:</label
+              >
+              <input
+                type="number"
+                min="1"
+                required
+                class="form-control"
+                id="tableBorder"
+                aria-describedby="emailHelp"
+                placeholder="Width"
+              />
+            </div>
+
+            <div class="col-4">
+              <label class="form-label" for="borderType">Type of border:</label>
+              <select class="form-select" id="borderType" name="borderType">
+                <option style="">solid</option>
+                <option style="">dotted</option>
+                <option style="">dashed</option>
+              </select>
+            </div>
+
+            <div class="col-4">
+              <label class="form-label" for="tableColor"
+                >Color of border:</label
+              >
+              <select class="form-select" id="tableColor" name="tableColor">
+                <option style="">red</option>
+                <option style="">blue</option>
+                <option style="">purple</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success mt-3">
+            Create Table
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
